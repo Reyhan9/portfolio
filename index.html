@@ -1,163 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Reyhan Ramadhan</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #161D3B, #0D1120);
-      color: #333;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      color: white;
-      font-weight: bold;
-    }
-
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: normal;
-    }
-
-    .container {
-      background: white;
-      max-width: 900px;
-      margin: 40px auto;
-      border-radius: 10px;
-      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
-      display: flex;
-      overflow: hidden;
-      flex-wrap: wrap;
-    }
-
-    .profile-img {
-      width: 50%;
-      display: flex;
-      align-items: center;   /* vertikal tengah */
-      justify-content: center; /* horizontal tengah */
-      background: #f5f5f5;
-    }
-
-    .profile-img img {
-      max-width: 80%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .profile-info {
-      padding: 40px;
-      width: 50%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .profile-info h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .profile-info h2 {
-      margin: 5px 0 20px;
-      font-size: 16px;
-      color: gray;
-    }
-
-    .profile-info p {
-      font-size: 14px;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .contact-info {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .contact-info div {
-      margin: 8px 0;
-    }
-
-    .socials a {
-      margin-right: 10px;
-      text-decoration: none;
-      color: #42c5f5;
-      font-size: 18px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .profile-img, .profile-info {
-        width: 100%;
-      }
-
-      .profile-info {
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo"><h1>Portofolio Reyhan Ramadhan</h1></div>
-<!--     
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul> -->
-  </div>
-
-  <!-- Profile Card -->
-  <div class="container">
-    <div class="profile-img">
-      <img src="MyProPhoto01 1.png" alt="Profile Picture">
-    </div>
-    <div class="profile-info">
-      <p>Hello Everybody, I am</p>
-      <h1>Reyhan Ramadhan</h1>
-      <h2>Junior Mobile Developer</h2>
-      <p>
-        I'm a mobile developer passionate about building modern, high-performance mobile applications with intuitive interface designs.
-        I focus on Android app development using Kotlin and cross-platform exploration with Compose Multiplatform.
-      </p>
-      
-      <div class="contact-info">
-        <div>📅 09 September 2008</div>
-        <div>📞 +62 895-3073-8150</div>
-        <div>📧 reyhanramadhan9928@gmail.com</div>
-        <div>📍 Citeureup, Bogor, Indonesia</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Portfolio Reyhan - Software Engineer</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>  
+    <!-- Navigation -->
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#home">Reyhan Ramadhan's Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="socials">
-        <a href="#">🌐</a>
-        <a href="#">🐦</a>
-        <a href="#">💼</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero__container">
+        <div class="hero__content" data-aos="fade-right">
+          <p class="subtitle">Hello All!</p>
+          <h1 class="title">
+            I'm <span class="highlight">Reyhan Ramadhan</span><br />
+            Software Engineer
+
+             <div class="hero__image" data-aos="fade-left">
+          <img src="/Portofolio-v2/assets/MyProPhoto01.jpg" alt="MY PHOTO PROFILE" class="profile-img">
+        </div>
+          </h1>
+          <p class="description">
+Saya Reyhan Ramadhan, siswa SMK Plus Pelita Nusantara berusia 17 tahun dengan minat di bidang software engineering. Portofolio ini berisi sejumlah proyek yang telah saya kerjakan sebagai bentuk pengembangan keterampilan dan pengalaman saya dalam dunia pemrograman.          </p>
+          <div class="action__btns">
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+            <a href="#projects" class="btn btn-outline">View Portfolio</a>
+          </div>
+        </div>
+       
       </div>
-    </div>
+    </section>
+
+    <!-- Skills Section -->   
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Technologies and tools I work with
+        </p>
+        
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon">
+              <i class="ri-code-s-slash-line"></i>
+            </div>
+            <h3 class="skill-title">Mobile Development</h3>
+            <ul class="skill-list">
+              <li><i class="ri-arrow-right-s-line"></i>KOTLIN</li>
+              <li><i class="ri-arrow-right-s-line"></i>JETPACK COMPOSE</li>
+              <li><i class="ri-arrow-right-s-line"></i>COMPOSE MULTIPLATFORM</li>
+              <li><i class="ri-arrow-right-s-line"></i>ANDROID STUDIO</li>
+            </ul>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon">
+              <i class="ri-server-line"></i>
+            </div>
+            <h3 class="skill-title">User Interface</h3>
+            <ul class="skill-list">
+              <li><i class="ri-arrow-right-s-line"></i>FIGMA</li>
+              <li><i class="ri-arrow-right-s-line"></i>PROTOTYPING</li>
+              <li><i class="ri-arrow-right-s-line"></i>USER FLOW</li>
+            </ul>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-icon">
+              <i class="ri-tools-line"></i>
+            </div>
+            <h3 class="skill-title">Tools & Others</h3>
+            <ul class="skill-list">
+              <li><i class="ri-arrow-right-s-line"></i>Git & GitHub</li>
+              <li><i class="ri-arrow-right-s-line"></i>VS Code</li>
+              <li><i class="ri-arrow-right-s-line"></i>Linux</li>
+              <li><i class="ri-arrow-right-s-line"></i>Patern design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Here are some of my recent works
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=200&fit=crop" alt="News App Screenshot">
+              <i class="ri-newspaper-line project-icon"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Peminjaman Buku</h3>
+              <p class="project-description">
+                Aplikasi backend php dengan framework Laravel, aplikasi ini memungkinkan kita untuk memudahkan mengelola peminjaman buku.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">LARAVEL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop" alt="QR Code Generator Screenshot">
+              <i class="ri-qr-code-line project-icon"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Game Minecraft</h3>
+              <p class="project-description">
+                dengan python saya membuat game untuk membangun game action untuk membangun atau menyusun blok-blok sehingga bisa membentuk suatu bangunan, game ini bisa mengasah kreatifitas para pengguna
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PYTHON</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-image">
+              <img src="https://media.istockphoto.com/id/2180206266/id/foto/konsep-pendidikan-online-e-learning-atau-e-library.jpg?s=612x612&w=0&k=20&c=1f-fh4t3Xy6vZC269k60AJJGfnxcM8c90jsiTzBU3sk=" alt="E-libary photo">
+              <i class="ri-book-open-line project-icon"></i>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Perencanaan Proyek Ambisius</h3>
+              <p class="project-description">
+                saya sedang membangun suatu aplikasi yang memungkinkan membuat program di perangkat seluler, ide ini bermula dari ada sebagian siswa penus yang tidak memiliki laptop dan saya berniat untuk membangun aplikasi Mobile yang dapat membuat program
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">KOTLIN</span>
+                <span class="tech-tag">JETPACK COMPOSE</span>
+                <span class="tech-tag">GRADLE</span>
+                <span class="tech-tag">SQLLITE</span>
+                <span class="tech-tag">SQL/NOSQL</span>
+                <span class="tech-tag">ANDROID STUDIO</span>
+                <span class="tech-tag">SWIFT</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contact me</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Let's work together to create something amazing!
+        </p>
+        
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <h3>Contact Information</h3>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="ri-mail-line"></i>
+              </div>
+              <div>
+                <strong>Email</strong><br>
+                reyhanramadhan9928@gmail.com
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div>
+                <strong>Phone</strong><br>
+                +62 895-3073-8150
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div>
+                <strong>Location</strong><br>
+                Indonesia, Bogor
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="ri-github-line"></i>
+              </div>
+              <div>
+                <strong>GitHub</strong><br>
+                github.com/reyhanrammadhan09  
+              </div>
+            </div>
+          </div>
+<form class="email-form" data-aos="fade-left" onsubmit="sendEmail(event)">
+  <h3>Send me a message</h3>
+  
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
   </div>
-</body>
+  
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" style="width: 100%;">
+    <i class="ri-send-plane-line"></i>
+    Send Message
+  </button>
+</form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://github.com/reyhanrammadhan09/" class="social-link">
+            <i class="ri-github-line"></i>
+          </a>
+          <a href="https://www.instagram.com/reyhanrammadhan09/" class="social-link">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </div>
+        <p class="footer-text">Website ini adalah Portofolio Reyhan Ramadhan</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+
+      function sendEmail(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Create mailto link
+        const mailtoLink = `mailto:hafizpratama@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        
+        // Open default email client
+        window.location.href = mailtoLink;
+        
+        // Show success message (you can customize this)
+        alert('Email client opened! Please send the email from your email application.');
+        
+        // Reset form
+        event.target.reset();
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      (function(){
+    emailjs.init("L1bU8749m6vkcIFj7"); // Ganti dengan Public Key dari EmailJS
+  })();
+
+  function sendEmail(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    emailjs.sendForm("service_9jkxyww", "template_r0m4ho8", form)
+      .then(() => {
+        alert("✅ Pesan berhasil terkirim!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("❌ Gagal mengirim pesan:", error);
+        alert("Gagal mengirim pesan, coba lagi.");
+      });
+  }
+    </script>
+  </body>
 </html>
